@@ -46,7 +46,7 @@ class Home extends JFrame{
     
         // ==================== ปรับแต่งรูปภาพ ==============================
     
-        ImageIcon imgIcon = new ImageIcon("C:\\OOPBeginning\\pmm2.5.png");
+        ImageIcon imgIcon = new ImageIcon("C:\\Project Duo\\GuiProject\\pm2.5picture.png");
         Image img = imgIcon.getImage();
         Image imgSetSize = img.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
         ImageIcon resizedIcon = new ImageIcon(imgSetSize);
@@ -77,19 +77,28 @@ class Home extends JFrame{
         panel.add(about);
         panel.add(Box.createRigidArea(new Dimension(0,25)));
         panel.add(quit);   
+        
+        // เมื่อกดปุ่มจะสลับหน้าจอเข้าไปสู่หน้า  Start Program
+        start.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                MyProjectGUI StartGui = new MyProjectGUI();
+                StartGui.setVisible(true);
+                dispose();
+            }
+        });
 
-
+        // เมื่อกดปุ่ม About จะสลับเข้าไปที่หน้า About แทน Home
         about.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                // เมื่อคลิกปุ่ม About จะเปลี่ยน ไปที่ About  แทน Home
                 Home_about about = new Home_about();
                 about.setVisible(true);
                 dispose();
             }
         });
+        
+        //เมื่อกดปุ่ม Quit จะทำการจบโปรแกรม หรือ ออกโปรแกรมนั้นเเอง
         quit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // เมื่อคลิกปุ่ม Quit หรือ ออกโปรแกรม
                 JOptionPane.showMessageDialog(quit, "Bye!");
                 System.exit(0);
             }
@@ -138,14 +147,14 @@ class Home_about extends JFrame{
         a_panel.setBackground(new Color(210,241,247));
         a_panel.setLayout(new GridLayout());        
         //ตั้งค่ารูปภาพ นิสิตคนแรก
-        ImageIcon Nisit_1 = new ImageIcon("C:\\OOPBeginning\\nisit1.jpg");
+        ImageIcon Nisit_1 = new ImageIcon("C:\\Project Duo\\GuiProject\\nisit1.jpg");
         Image img_Nisit_1 = Nisit_1.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
         
         //==================== ใส่รูปนิสิตลงไปใน label_1  ==============================
         JLabel Nisit1_Label_1 = new JLabel(new ImageIcon(img_Nisit_1));
 
         //ตั้งค่ารูปภาพ นิสิตคนสอง
-        ImageIcon Nisit_2 = new ImageIcon("C:\\OOPBeginning\\nisit2.jpg");
+        ImageIcon Nisit_2 = new ImageIcon("C:\\Project Duo\\GuiProject\\nisit2.jpg");
         Image img_Nisit_2 = Nisit_2.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
         
         //==================== ใส่รูปนิสิตลงไปใน label_2  ==============================

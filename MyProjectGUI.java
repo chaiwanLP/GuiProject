@@ -26,4 +26,9 @@ public class MyProjectGUI {
         // ตัวอ่านไฟล์
 
     }
+
+    public void setVisible(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setVisible'");
+    }
 }
