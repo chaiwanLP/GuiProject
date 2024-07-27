@@ -81,9 +81,8 @@ class Home extends JFrame{
         // เมื่อกดปุ่มจะสลับหน้าจอเข้าไปสู่หน้า  Start Program
         start.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                MyProjectGUI StartGui = new MyProjectGUI();
-                StartGui.setVisible(true);
-                dispose();
+              
+                
             }
         });
 
